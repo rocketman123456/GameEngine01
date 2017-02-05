@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6914AC6F-7CB6-4F93-9373-4D824A62F320}</ProjectGuid>
+    <RootNamespace>TutorialFunctions</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)\external\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>D:\Library\bullet3\src;D:\Library\SDL2-2.0.5\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet2FileLoader.vcxproj">
+      <Project>{766e92f9-e284-908f-2bfc-1bb197516117}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Collision.vcxproj">
+      <Project>{ec30bef4-d829-dd46-015c-c2cbedb3bc52}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Common.vcxproj">
+      <Project>{a9326e37-15f3-e96d-de2d-33eb4aad2e4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Dynamics.vcxproj">
+      <Project>{189748bb-8422-b67f-8d33-3974f93d1280}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Geometry.vcxproj">
+      <Project>{0c73ab7f-78fe-1844-810f-9c38ed197544}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3OpenCL_clew.vcxproj">
+      <Project>{0b05b441-f7e8-7497-6049-6fea4c4c5f19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletCollision.vcxproj">
+      <Project>{b91153c5-259d-c089-2eae-437e9ab81c8a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletDynamics.vcxproj">
+      <Project>{45122e0f-31e0-2115-1a74-923b06e1fd79}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletExampleBrowserLib.vcxproj">
+      <Project>{f4c199cc-60f9-e163-6903-4687d5b9085d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletFileLoader.vcxproj">
+      <Project>{241e2062-1017-3fb4-3949-243925a11ec0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletInverseDynamics.vcxproj">
+      <Project>{c1a79f57-2d14-5b52-f607-f3af62337dba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletInverseDynamicsUtils.vcxproj">
+      <Project>{3234f748-1e44-a319-87fd-0738732c92b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletSoftBody.vcxproj">
+      <Project>{d73ddad3-c30b-ced9-ac9f-3e00980caa3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletWorldImporter.vcxproj">
+      <Project>{27d475f8-9335-5306-1ca3-99b888038ac5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletXmlWorldImporter.vcxproj">
+      <Project>{78912bd5-648b-5427-4df8-ea373991ba93}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\SDL2-2.0.5\build\SDL2-static.vcxproj">
+      <Project>{e480852d-42a1-3ff2-8cd1-0b75772192d6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\SDL2-2.0.5\build\SDL2.vcxproj">
+      <Project>{3ddc4a8b-74e0-3555-84cf-eee1b0deaf60}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\SDL2-2.0.5\build\SDL2main.vcxproj">
+      <Project>{d7324c5c-27e9-3492-ab25-e7ab49fc2942}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="functions.cpp" />
+    <ClCompile Include="objloader.cpp" />
+    <ClCompile Include="vector3d.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="functions.h" />
+    <ClInclude Include="objloader.h" />
+    <ClInclude Include="vector3d.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

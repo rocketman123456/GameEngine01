@@ -1,0 +1,7 @@
+# window parameter
+WIDTH=1280
+HEIGHT=720
+vertShader=ShaderVulkan/vert.spv
+fragShader=ShaderVulkan/frag.spv
+vert=ShaderOpenGL/base.vert
+frag=ShaderOpenGL/base.frag

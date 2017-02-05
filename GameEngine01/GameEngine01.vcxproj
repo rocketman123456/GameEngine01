@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F4676467-F6A0-44F8-B25C-10F65958FF94}</ProjectGuid>
+    <RootNamespace>GameEngine01</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>GameEngine-core</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>D:\Library\opencv2.4.9\build\include;D:\Library\VulkanSDK\1.0.37.0\Include;D:\Library\bullet3\src;D:\Library\glfw-3.2.1\include;D:\Library\glm\;D:\Library\glew-2.0.0\include;D:\Library\Simple OpenGL Image Library\src;D:\Library\tinyobjloader;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Library\VulkanSDK\1.0.37.0\Bin;D:\Library\opencv\build\x64\vc14;D:\Library\g2o\bin\Debug;D:\Library\Simple OpenGL Image Library\projects\VC9\x64\Debug;$(LibraryPath)</LibraryPath>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\Program\GameEngine01\SLAM;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <PreprocessorDefinitions>_WINDOWS;GLEW_STATIC;GLFW_INCLUDE_VULKAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>vulkan-1.lib;opengl32.lib;winmm.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphics\BatchRenderer2D.cpp" />
+    <ClCompile Include="Graphics\Buffer\Buffer.cpp" />
+    <ClCompile Include="Graphics\Buffer\VertexArray.cpp" />
+    <ClCompile Include="Graphics\Graphics.cpp" />
+    <ClCompile Include="Graphics\Buffer\IndexBuffer.cpp" />
+    <ClCompile Include="Graphics\Simple2DRenderer.cpp" />
+    <ClCompile Include="Graphics\Shader.cpp" />
+    <ClCompile Include="Graphics\Sprite.cpp" />
+    <ClCompile Include="Graphics\StaticSprite.cpp" />
+    <ClCompile Include="Graphics\Window.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Math\mat4.cpp" />
+    <ClCompile Include="Math\mtxlib.cpp" />
+    <ClCompile Include="Math\vec2.cpp" />
+    <ClCompile Include="Math\vec3.cpp" />
+    <ClCompile Include="Math\vec4.cpp" />
+    <ClCompile Include="MatTransmission\WinsockMatTransmissionClient.cpp" />
+    <ClCompile Include="MatTransmission\WinsockMatTransmissionServer.cpp" />
+    <ClCompile Include="Profile\custom_time.cpp" />
+    <ClCompile Include="Profile\profile.cpp" />
+    <ClCompile Include="Profile\stat.cpp" />
+    <ClCompile Include="TextBox\TextBox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graphics\BatchRenderer2D.h" />
+    <ClInclude Include="Graphics\Buffer\Buffer.h" />
+    <ClInclude Include="Graphics\Buffer\IndexBuffer.h" />
+    <ClInclude Include="Graphics\Buffer\VertexArray.h" />
+    <ClInclude Include="Graphics\Renderable2d.h" />
+    <ClInclude Include="Graphics\Renderer2d.h" />
+    <ClInclude Include="Graphics\Simple2DRenderer.h" />
+    <ClInclude Include="Graphics\Shader.h" />
+    <ClInclude Include="Graphics\Sprite.h" />
+    <ClInclude Include="Graphics\StaticSprite.h" />
+    <ClInclude Include="Graphics\VDeleter.h" />
+    <ClInclude Include="Graphics\Window.h" />
+    <ClInclude Include="Math\mat4.h" />
+    <ClInclude Include="Math\Math.h" />
+    <ClInclude Include="Math\vec3.h" />
+    <ClInclude Include="Math\vec4.h" />
+    <ClInclude Include="Profile\custom_time.h" />
+    <ClInclude Include="Profile\profile.h" />
+    <ClInclude Include="Graphics\Graphics.h" />
+    <ClInclude Include="Math\mtxlib.h" />
+    <ClInclude Include="MatTransmission\Receive.h" />
+    <ClInclude Include="MatTransmission\Send.h" />
+    <ClInclude Include="Singleton\Singleton.h" />
+    <ClInclude Include="MatTransmission\WinsockMatTransmissionClient.h" />
+    <ClInclude Include="MatTransmission\WinsockMatTransmissionServer.h" />
+    <ClInclude Include="Profile\stat.h" />
+    <ClInclude Include="TextBox\def.h" />
+    <ClInclude Include="TextBox\TextBox.h" />
+    <ClInclude Include="Math\vec2.h" />
+    <ClInclude Include="utils\FileUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet2FileLoader.vcxproj">
+      <Project>{766e92f9-e284-908f-2bfc-1bb197516117}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Collision.vcxproj">
+      <Project>{ec30bef4-d829-dd46-015c-c2cbedb3bc52}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Common.vcxproj">
+      <Project>{a9326e37-15f3-e96d-de2d-33eb4aad2e4a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Dynamics.vcxproj">
+      <Project>{189748bb-8422-b67f-8d33-3974f93d1280}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3Geometry.vcxproj">
+      <Project>{0c73ab7f-78fe-1844-810f-9c38ed197544}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\Bullet3OpenCL_clew.vcxproj">
+      <Project>{0b05b441-f7e8-7497-6049-6fea4c4c5f19}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletCollision.vcxproj">
+      <Project>{b91153c5-259d-c089-2eae-437e9ab81c8a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletDynamics.vcxproj">
+      <Project>{45122e0f-31e0-2115-1a74-923b06e1fd79}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletExampleBrowserLib.vcxproj">
+      <Project>{f4c199cc-60f9-e163-6903-4687d5b9085d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletFileLoader.vcxproj">
+      <Project>{241e2062-1017-3fb4-3949-243925a11ec0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletInverseDynamics.vcxproj">
+      <Project>{c1a79f57-2d14-5b52-f607-f3af62337dba}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletInverseDynamicsUtils.vcxproj">
+      <Project>{3234f748-1e44-a319-87fd-0738732c92b2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletSoftBody.vcxproj">
+      <Project>{d73ddad3-c30b-ced9-ac9f-3e00980caa3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletWorldImporter.vcxproj">
+      <Project>{27d475f8-9335-5306-1ca3-99b888038ac5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\BulletXmlWorldImporter.vcxproj">
+      <Project>{78912bd5-648b-5427-4df8-ea373991ba93}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\LinearMath.vcxproj">
+      <Project>{eaf25dfd-d6aa-9f4a-3fb2-78a62b893a3b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\bullet3\build3\vs2015\OpenGL_Window.vcxproj">
+      <Project>{61f86b85-cdb8-e7bb-96f3-303902732c98}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\glew-2.0.0\build\vc12\glew_static.vcxproj">
+      <Project>{664e6f0d-6784-4760-9565-d54f8eb1edf4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\glfw-3.2.1\build\src\glfw.vcxproj">
+      <Project>{89f74326-fa65-3839-9ed6-9ddf4fa2aa94}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{ae688220-0140-35bd-a318-6bd7dd2a5c61}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\contrib\opencv_contrib.vcxproj">
+      <Project>{a3f2d232-4075-3b99-8358-75549ae0fb63}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\core\opencv_core.vcxproj">
+      <Project>{cac04f39-ba97-334d-aa77-3117cecce1e4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{a8b9b6e3-29ed-327d-9107-fdcfb53347de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\flann\opencv_flann.vcxproj">
+      <Project>{48756aaa-7b1c-34f1-bc40-2224ccd0d77a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\gpu\opencv_gpu.vcxproj">
+      <Project>{9c597fa2-42a0-3624-a158-e1c51169a941}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{17d5adad-8eab-3362-abeb-3e2b25afbaff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{ffee9703-5125-372e-ae8c-3cd6c28d3ace}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\legacy\opencv_legacy.vcxproj">
+      <Project>{be7799ba-6338-346b-8f2b-36e1cbb0c19a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ml\opencv_ml.vcxproj">
+      <Project>{d2450bba-c0a8-3588-ae74-9ef27f998ead}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\nonfree\opencv_nonfree.vcxproj">
+      <Project>{0c7e7791-71fd-361d-8fc6-3b4d04be5708}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{afab732e-9658-3496-ae12-1ef71e86f283}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ocl\opencv_ocl.vcxproj">
+      <Project>{b88af93d-ddde-3fc9-bf8b-cef58e45b36c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\photo\opencv_photo.vcxproj">
+      <Project>{f66db463-117e-3658-adaf-93540ce06b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{5e660bfc-3c1b-3122-9e2b-5455df33f407}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\superres\opencv_superres.vcxproj">
+      <Project>{56436718-efd6-3764-be35-444f4d163d74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ts\opencv_ts.vcxproj">
+      <Project>{ef56fe05-99bd-3521-b909-b2d9d91e0d02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\videostab\opencv_videostab.vcxproj">
+      <Project>{039f1316-cb65-3021-aa71-8ba2dc7f7731}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\video\opencv_video.vcxproj">
+      <Project>{529cb472-a534-39ec-84e1-f6a41858e6e6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="DebugMatrix.txt" />
+    <Text Include="parameters.txt" />
+    <Text Include="window.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ShaderOpenGL\base.frag" />
+    <None Include="ShaderOpenGL\base.vert" />
+    <None Include="ShaderOpenGL\shader.frag" />
+    <None Include="ShaderOpenGL\shader.vert" />
+    <None Include="ShaderVulkan\shader.frag" />
+    <None Include="ShaderVulkan\shader.vert" />
+    <None Include="xtion.yaml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

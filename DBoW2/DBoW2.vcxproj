@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0791B206-8F5C-48C2-A10F-3CDCB3E1B563}</ProjectGuid>
+    <RootNamespace>DBoW2</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)\external\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>D:\Library\opencv2.4.9\build\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+      <CompileAs>CompileAsCpp</CompileAs>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/wd4996 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DBoW2\BowVector.cpp" />
+    <ClCompile Include="DBoW2\FeatureVector.cpp" />
+    <ClCompile Include="DBoW2\FORB.cpp" />
+    <ClCompile Include="DBoW2\ScoringObject.cpp" />
+    <ClCompile Include="DUtils\Random.cpp" />
+    <ClCompile Include="DUtils\Timestamp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBoW2\BowVector.h" />
+    <ClInclude Include="DBoW2\FClass.h" />
+    <ClInclude Include="DBoW2\FeatureVector.h" />
+    <ClInclude Include="DBoW2\FORB.h" />
+    <ClInclude Include="DBoW2\ScoringObject.h" />
+    <ClInclude Include="DBoW2\TemplatedVocabulary.h" />
+    <ClInclude Include="DUtils\Random.h" />
+    <ClInclude Include="DUtils\Timestamp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{ae688220-0140-35bd-a318-6bd7dd2a5c61}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\contrib\opencv_contrib.vcxproj">
+      <Project>{a3f2d232-4075-3b99-8358-75549ae0fb63}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\core\opencv_core.vcxproj">
+      <Project>{cac04f39-ba97-334d-aa77-3117cecce1e4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{a8b9b6e3-29ed-327d-9107-fdcfb53347de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\flann\opencv_flann.vcxproj">
+      <Project>{48756aaa-7b1c-34f1-bc40-2224ccd0d77a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\gpu\opencv_gpu.vcxproj">
+      <Project>{9c597fa2-42a0-3624-a158-e1c51169a941}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{17d5adad-8eab-3362-abeb-3e2b25afbaff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{ffee9703-5125-372e-ae8c-3cd6c28d3ace}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\legacy\opencv_legacy.vcxproj">
+      <Project>{be7799ba-6338-346b-8f2b-36e1cbb0c19a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ml\opencv_ml.vcxproj">
+      <Project>{d2450bba-c0a8-3588-ae74-9ef27f998ead}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\nonfree\opencv_nonfree.vcxproj">
+      <Project>{0c7e7791-71fd-361d-8fc6-3b4d04be5708}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{afab732e-9658-3496-ae12-1ef71e86f283}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ocl\opencv_ocl.vcxproj">
+      <Project>{b88af93d-ddde-3fc9-bf8b-cef58e45b36c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\photo\opencv_photo.vcxproj">
+      <Project>{f66db463-117e-3658-adaf-93540ce06b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{5e660bfc-3c1b-3122-9e2b-5455df33f407}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\superres\opencv_superres.vcxproj">
+      <Project>{56436718-efd6-3764-be35-444f4d163d74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ts\opencv_ts.vcxproj">
+      <Project>{ef56fe05-99bd-3521-b909-b2d9d91e0d02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\videostab\opencv_videostab.vcxproj">
+      <Project>{039f1316-cb65-3021-aa71-8ba2dc7f7731}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\video\opencv_video.vcxproj">
+      <Project>{529cb472-a534-39ec-84e1-f6a41858e6e6}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

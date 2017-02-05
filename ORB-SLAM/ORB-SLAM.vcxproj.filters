@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\SLAM">
+      <UniqueIdentifier>{9874dfd1-b38d-43e7-a481-d1b31d8154ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SLAM">
+      <UniqueIdentifier>{020adbac-cca9-4be4-8d18-a10569cd9ce3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RGBD-SLAM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameDrawer.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Initializer.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFrame.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFrameDatabase.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalMapping.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopClosing.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="MapDrawer.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="MapPoint.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Optimizer.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="ORBextractor.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="ORBmatcher.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="PnPsolver.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Sim3Solver.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracking.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewer.cpp">
+      <Filter>Source Files\SLAM</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Converter.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Frame.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameDrawer.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Initializer.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyFrame.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyFrameDatabase.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalMapping.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopClosing.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="MapDrawer.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="MapPoint.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimizer.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="ORBextractor.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="ORBmatcher.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="ORBVocabulary.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="PnPsolver.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Sim3Solver.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracking.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewer.h">
+      <Filter>Header Files\SLAM</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBD-SLAM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

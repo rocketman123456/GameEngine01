@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{487A25F6-270F-4B94-8270-7DACF4651AEA}</ProjectGuid>
+    <RootNamespace>ORBSLAM</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>ORB-SLAM2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)\external\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>D:\Library\Pangolin\include;D:\Library\glew-2.0.0\include;D:\Program\GameEngine01\DBoW2;D:\Library\opencv2.4.9\build\include;D:\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2;D:\Library\PCL 1.8.0\3rdParty\OpenNI2\Include;D:\Library\PCL 1.8.0\3rdParty\Eigen\eigen3;D:\Library\PCL 1.8.0\3rdParty\Boost\include;D:\Library\PCL 1.8.0\3rdParty\FLANN\include;D:\Library\PCL 1.8.0\3rdParty\Qhull\include;D:\Library\PCL 1.8.0\3rdParty\VTK\include;D:\Library\PCL 1.8.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Library\PCL 1.8.0\lib;D:\Library\PCL 1.8.0\3rdParty\Boost\lib;D:\Library\PCL 1.8.0\3rdParty\OpenNI2\Lib;D:\Library\PCL 1.8.0\3rdParty\FLANN\lib;D:\Library\PCL 1.8.0\3rdParty\Qhull\lib;D:\Library\PCL 1.8.0\3rdParty\VTK\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/wd4996 /std:c++11 %(AdditionalOptions)</AdditionalOptions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>g2o_calibration_odom_laser_d.lib;g2o_cli_d.lib;g2o_core_d.lib;g2o_csparse_extension_d.lib;g2o_ext_csparse_d.lib;g2o_ext_freeglut_minimal_d.lib;g2o_hierarchical_d.lib;g2o_interface_d.lib;g2o_opengl_helper_d.lib;g2o_parser_d.lib;g2o_simulator_d.lib;g2o_solver_csparse_d.lib;g2o_solver_dense_d.lib;g2o_solver_pcg_d.lib;g2o_solver_slam2d_linear_d.lib;g2o_solver_structure_only_d.lib;g2o_stuff_d.lib;g2o_tutorial_slam2d_d.lib;g2o_types_data_d.lib;g2o_types_icp_d.lib;g2o_types_sba_d.lib;g2o_types_sclam2d_d.lib;g2o_types_slam2d_addons_d.lib;g2o_types_slam2d_d.lib;g2o_types_slam3d_addons_d.lib;g2o_types_slam3d_d.lib;g2o_viewer_d.lib;OpenNI2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>OpenNI2.lib;pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_debug.lib;pcl_io_ply_debug.lib;pcl_kdtree_debug.lib;pcl_keypoints_debug.lib;pcl_octree_debug.lib;pcl_outofcore_debug.lib;pcl_people_debug.lib;pcl_recognition_debug.lib;pcl_registration_debug.lib;pcl_sample_consensus_debug.lib;pcl_search_debug.lib;pcl_segmentation_debug.lib;pcl_surface_debug.lib;pcl_tracking_debug.lib;pcl_visualization_debug.lib;libboost_atomic-vc140-mt-gd-1_61.lib;libboost_chrono-vc140-mt-gd-1_61.lib;libboost_container-vc140-mt-gd-1_61.lib;libboost_context-vc140-mt-gd-1_61.lib;libboost_coroutine-vc140-mt-gd-1_61.lib;libboost_date_time-vc140-mt-gd-1_61.lib;libboost_exception-vc140-mt-gd-1_61.lib;libboost_filesystem-vc140-mt-gd-1_61.lib;libboost_graph-vc140-mt-gd-1_61.lib;libboost_iostreams-vc140-mt-gd-1_61.lib;libboost_locale-vc140-mt-gd-1_61.lib;libboost_log-vc140-mt-gd-1_61.lib;libboost_log_setup-vc140-mt-gd-1_61.lib;libboost_math_c99-vc140-mt-gd-1_61.lib;libboost_math_c99f-vc140-mt-gd-1_61.lib;libboost_math_c99l-vc140-mt-gd-1_61.lib;libboost_math_tr1-vc140-mt-gd-1_61.lib;libboost_math_tr1f-vc140-mt-gd-1_61.lib;libboost_math_tr1l-vc140-mt-gd-1_61.lib;libboost_mpi-vc140-mt-gd-1_61.lib;libboost_prg_exec_monitor-vc140-mt-gd-1_61.lib;libboost_program_options-vc140-mt-gd-1_61.lib;libboost_random-vc140-mt-gd-1_61.lib;libboost_regex-vc140-mt-gd-1_61.lib;libboost_serialization-vc140-mt-gd-1_61.lib;libboost_signals-vc140-mt-gd-1_61.lib;libboost_system-vc140-mt-gd-1_61.lib;libboost_test_exec_monitor-vc140-mt-gd-1_61.lib;libboost_thread-vc140-mt-gd-1_61.lib;libboost_timer-vc140-mt-gd-1_61.lib;libboost_type_erasure-vc140-mt-gd-1_61.lib;libboost_unit_test_framework-vc140-mt-gd-1_61.lib;libboost_wave-vc140-mt-gd-1_61.lib;libboost_wserialization-vc140-mt-gd-1_61.lib;flann_cpp_s-gd.lib;flann_s-gd.lib;flann-gd.lib;qhull_d.lib;qhull_p_d.lib;qhull_r_d.lib;qhullcpp_d.lib;qhullstatic_d.lib;qhullstatic_r_d.lib;vtkChartsCore-7.0-gd.lib;vtkCommonColor-7.0-gd.lib;vtkCommonComputationalGeometry-7.0-gd.lib;vtkCommonCore-7.0-gd.lib;vtkCommonDataModel-7.0-gd.lib;vtkCommonExecutionModel-7.0-gd.lib;vtkCommonMath-7.0-gd.lib;vtkCommonMisc-7.0-gd.lib;vtkCommonSystem-7.0-gd.lib;vtkCommonTransforms-7.0-gd.lib;vtkDICOMParser-7.0-gd.lib;vtkDomainsChemistry-7.0-gd.lib;vtkFiltersAMR-7.0-gd.lib;vtkFiltersCore-7.0-gd.lib;vtkFiltersExtraction-7.0-gd.lib;vtkFiltersFlowPaths-7.0-gd.lib;vtkFiltersGeneral-7.0-gd.lib;vtkFiltersGeneric-7.0-gd.lib;vtkFiltersGeometry-7.0-gd.lib;vtkFiltersHybrid-7.0-gd.lib;vtkFiltersHyperTree-7.0-gd.lib;vtkFiltersImaging-7.0-gd.lib;vtkFiltersModeling-7.0-gd.lib;vtkFiltersParallel-7.0-gd.lib;vtkFiltersParallelImaging-7.0-gd.lib;vtkFiltersProgrammable-7.0-gd.lib;vtkFiltersSMP-7.0-gd.lib;vtkFiltersSelection-7.0-gd.lib;vtkFiltersSources-7.0-gd.lib;vtkFiltersStatistics-7.0-gd.lib;vtkFiltersTexture-7.0-gd.lib;vtkFiltersVerdict-7.0-gd.lib;vtkGeovisCore-7.0-gd.lib;vtkIOAMR-7.0-gd.lib;vtkIOCore-7.0-gd.lib;vtkIOEnSight-7.0-gd.lib;vtkIOExodus-7.0-gd.lib;vtkIOExport-7.0-gd.lib;vtkIOGeometry-7.0-gd.lib;vtkIOImage-7.0-gd.lib;vtkIOImport-7.0-gd.lib;vtkIOInfovis-7.0-gd.lib;vtkIOLSDyna-7.0-gd.lib;vtkIOLegacy-7.0-gd.lib;vtkIOMINC-7.0-gd.lib;vtkIOMovie-7.0-gd.lib;vtkIONetCDF-7.0-gd.lib;vtkIOPLY-7.0-gd.lib;vtkIOParallel-7.0-gd.lib;vtkIOParallelXML-7.0-gd.lib;vtkIOSQL-7.0-gd.lib;vtkIOVideo-7.0-gd.lib;vtkIOXML-7.0-gd.lib;vtkIOXMLParser-7.0-gd.lib;vtkImagingColor-7.0-gd.lib;vtkImagingCore-7.0-gd.lib;vtkImagingFourier-7.0-gd.lib;vtkImagingGeneral-7.0-gd.lib;vtkImagingHybrid-7.0-gd.lib;vtkImagingMath-7.0-gd.lib;vtkImagingMorphological-7.0-gd.lib;vtkImagingSources-7.0-gd.lib;vtkImagingStatistics-7.0-gd.lib;vtkImagingStencil-7.0-gd.lib;vtkInfovisCore-7.0-gd.lib;vtkInfovisLayout-7.0-gd.lib;vtkInteractionImage-7.0-gd.lib;vtkInteractionStyle-7.0-gd.lib;vtkInteractionWidgets-7.0-gd.lib;vtkNetCDF-7.0-gd.lib;vtkNetCDF_cxx-7.0-gd.lib;vtkParallelCore-7.0-gd.lib;vtkRenderingAnnotation-7.0-gd.lib;vtkRenderingContext2D-7.0-gd.lib;vtkRenderingContextOpenGL-7.0-gd.lib;vtkRenderingCore-7.0-gd.lib;vtkRenderingFreeType-7.0-gd.lib;vtkRenderingGL2PS-7.0-gd.lib;vtkRenderingImage-7.0-gd.lib;vtkRenderingLIC-7.0-gd.lib;vtkRenderingLOD-7.0-gd.lib;vtkRenderingLabel-7.0-gd.lib;vtkRenderingOpenGL-7.0-gd.lib;vtkRenderingVolume-7.0-gd.lib;vtkRenderingVolumeOpenGL-7.0-gd.lib;vtkViewsContext2D-7.0-gd.lib;vtkViewsCore-7.0-gd.lib;vtkViewsInfovis-7.0-gd.lib;vtkalglib-7.0-gd.lib;vtkexoIIc-7.0-gd.lib;vtkexpat-7.0-gd.lib;vtkfreetype-7.0-gd.lib;vtkgl2ps-7.0-gd.lib;vtkhdf5-7.0-gd.lib;vtkhdf5_hl-7.0-gd.lib;vtkjpeg-7.0-gd.lib;vtkjsoncpp-7.0-gd.lib;vtklibxml2-7.0-gd.lib;vtkmetaio-7.0-gd.lib;vtkoggtheora-7.0-gd.lib;vtkpng-7.0-gd.lib;vtkproj4-7.0-gd.lib;vtksqlite-7.0-gd.lib;vtksys-7.0-gd.lib;vtktiff-7.0-gd.lib;vtkverdict-7.0-gd.lib;vtkzlib-7.0-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/std:c++11 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Library\glew-2.0.0\build\vc12\glew_shared.vcxproj">
+      <Project>{55ae3d72-7de6-f19f-aef2-9ae8ca26cf3d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\glfw-3.2.1\build\src\glfw.vcxproj">
+      <Project>{89f74326-fa65-3839-9ed6-9ddf4fa2aa94}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\calib3d\opencv_calib3d.vcxproj">
+      <Project>{ae688220-0140-35bd-a318-6bd7dd2a5c61}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\contrib\opencv_contrib.vcxproj">
+      <Project>{a3f2d232-4075-3b99-8358-75549ae0fb63}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\core\opencv_core.vcxproj">
+      <Project>{cac04f39-ba97-334d-aa77-3117cecce1e4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\features2d\opencv_features2d.vcxproj">
+      <Project>{a8b9b6e3-29ed-327d-9107-fdcfb53347de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\flann\opencv_flann.vcxproj">
+      <Project>{48756aaa-7b1c-34f1-bc40-2224ccd0d77a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\gpu\opencv_gpu.vcxproj">
+      <Project>{9c597fa2-42a0-3624-a158-e1c51169a941}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\highgui\opencv_highgui.vcxproj">
+      <Project>{17d5adad-8eab-3362-abeb-3e2b25afbaff}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\imgproc\opencv_imgproc.vcxproj">
+      <Project>{ffee9703-5125-372e-ae8c-3cd6c28d3ace}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\legacy\opencv_legacy.vcxproj">
+      <Project>{be7799ba-6338-346b-8f2b-36e1cbb0c19a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ml\opencv_ml.vcxproj">
+      <Project>{d2450bba-c0a8-3588-ae74-9ef27f998ead}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\nonfree\opencv_nonfree.vcxproj">
+      <Project>{0c7e7791-71fd-361d-8fc6-3b4d04be5708}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\objdetect\opencv_objdetect.vcxproj">
+      <Project>{afab732e-9658-3496-ae12-1ef71e86f283}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ocl\opencv_ocl.vcxproj">
+      <Project>{b88af93d-ddde-3fc9-bf8b-cef58e45b36c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\photo\opencv_photo.vcxproj">
+      <Project>{f66db463-117e-3658-adaf-93540ce06b42}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\stitching\opencv_stitching.vcxproj">
+      <Project>{5e660bfc-3c1b-3122-9e2b-5455df33f407}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\superres\opencv_superres.vcxproj">
+      <Project>{56436718-efd6-3764-be35-444f4d163d74}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\ts\opencv_ts.vcxproj">
+      <Project>{ef56fe05-99bd-3521-b909-b2d9d91e0d02}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\videostab\opencv_videostab.vcxproj">
+      <Project>{039f1316-cb65-3021-aa71-8ba2dc7f7731}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\opencv2.4.9\sources\build\modules\video\opencv_video.vcxproj">
+      <Project>{529cb472-a534-39ec-84e1-f6a41858e6e6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\apps\g2o_cli\g2o_cli_library.vcxproj">
+      <Project>{703eafa5-c457-3315-b58e-fd07ed16cc35}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\apps\g2o_hierarchical\g2o_hierarchical_library.vcxproj">
+      <Project>{7638471e-850c-3eef-8c30-35851e876132}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\apps\g2o_simulator\g2o_simulator_library.vcxproj">
+      <Project>{bd7719b9-be98-39cf-ac69-fd215f4fc27f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\apps\g2o_viewer\viewer_library.vcxproj">
+      <Project>{6afcf5ba-ebd7-3f45-8218-c48db422ff71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\core\core.vcxproj">
+      <Project>{ad4e813f-c992-3cc6-a65d-4af23fdcb7f3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\examples\calibration_odom_laser\calibration_odom_laser_library.vcxproj">
+      <Project>{101e0760-ad10-322b-bd6b-b15eaf378b07}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\examples\tutorial_slam2d\tutorial_slam2d_library.vcxproj">
+      <Project>{77fa5c78-6e54-3cc4-b874-c04571e8767e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\csparse\csparse_extension.vcxproj">
+      <Project>{dd86176b-9205-3de4-9329-fdceb2ec4a25}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\csparse\solver_csparse.vcxproj">
+      <Project>{579b9246-9e11-3f04-9f5e-fa9165ecf820}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\dense\solver_dense.vcxproj">
+      <Project>{e596ac2e-6397-34b6-82a6-934a1559a081}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\pcg\solver_pcg.vcxproj">
+      <Project>{75fe2ec2-c3c3-3e9f-a3e3-e58e31c8c2fd}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\slam2d_linear\solver_slam2d_linear.vcxproj">
+      <Project>{ef5f3181-e8e5-3cc1-9a60-c019d2943749}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\solvers\structure_only\solver_structure_only.vcxproj">
+      <Project>{c3c4a7ae-848f-394f-a554-fed2e48a6ab1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\stuff\opengl_helper.vcxproj">
+      <Project>{f4b53084-c7a4-3c20-b9ec-d19205e0d139}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\stuff\stuff.vcxproj">
+      <Project>{d78ed6e6-39f2-3eb2-a616-b10cc9239e04}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\data\types_data.vcxproj">
+      <Project>{779d71fe-a8ca-38d6-bfca-516efd0662fc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\icp\types_icp.vcxproj">
+      <Project>{bca76e37-4d9b-3dc1-8576-e7da9a2af109}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\sba\types_sba.vcxproj">
+      <Project>{80f64c00-cfb3-3562-b9d3-b8e2ab37c926}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\sclam2d\types_sclam2d.vcxproj">
+      <Project>{5acf8de3-1dc6-3c39-82c0-a24982b84e8a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\sim3\types_sim3.vcxproj">
+      <Project>{83b8dc99-78e3-3be4-8521-43841decf20a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\slam2d\types_slam2d.vcxproj">
+      <Project>{b4ec8118-8848-3b4d-b148-5b3b84bd93e6}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\slam2d_addons\types_slam2d_addons.vcxproj">
+      <Project>{605cb354-c0d5-3c93-8edf-2a05130c3057}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\slam3d\types_slam3d.vcxproj">
+      <Project>{24883dff-5cbf-3e35-ac27-731a7342a1b1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\ORB-SLAM2_with_pointcloud_map\g2o_with_orbslam2\build\g2o\types\slam3d_addons\types_slam3d_addons.vcxproj">
+      <Project>{b3cfcd3d-80be-3282-a489-47f84ee296c7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Library\Pangolin\build\src\pangolin.vcxproj">
+      <Project>{4f07b490-733b-360b-9856-cf71f1a9a4bc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\DBoW2\DBoW2.vcxproj">
+      <Project>{0791b206-8f5c-48c2-a10f-3cdcb3e1b563}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Converter.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="FrameDrawer.cpp" />
+    <ClCompile Include="Initializer.cpp" />
+    <ClCompile Include="KeyFrame.cpp" />
+    <ClCompile Include="KeyFrameDatabase.cpp" />
+    <ClCompile Include="LocalMapping.cpp" />
+    <ClCompile Include="LoopClosing.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapDrawer.cpp" />
+    <ClCompile Include="MapPoint.cpp" />
+    <ClCompile Include="Optimizer.cpp" />
+    <ClCompile Include="ORBextractor.cpp" />
+    <ClCompile Include="ORBmatcher.cpp" />
+    <ClCompile Include="PnPsolver.cpp" />
+    <ClCompile Include="RGBD-SLAM.cpp" />
+    <ClCompile Include="Sim3Solver.cpp" />
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="Tracking.cpp" />
+    <ClCompile Include="Viewer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Converter.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="FrameDrawer.h" />
+    <ClInclude Include="Initializer.h" />
+    <ClInclude Include="KeyFrame.h" />
+    <ClInclude Include="KeyFrameDatabase.h" />
+    <ClInclude Include="LocalMapping.h" />
+    <ClInclude Include="LoopClosing.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapDrawer.h" />
+    <ClInclude Include="MapPoint.h" />
+    <ClInclude Include="Optimizer.h" />
+    <ClInclude Include="ORBextractor.h" />
+    <ClInclude Include="ORBmatcher.h" />
+    <ClInclude Include="ORBVocabulary.h" />
+    <ClInclude Include="PnPsolver.h" />
+    <ClInclude Include="RGBD-SLAM.h" />
+    <ClInclude Include="Sim3Solver.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Tracking.h" />
+    <ClInclude Include="Viewer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
